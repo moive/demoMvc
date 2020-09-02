@@ -7,11 +7,20 @@ using System.Web.Mvc;
 namespace demoMvc.Controllers
 {
 
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+
     public class HomeController : Controller
     {
-        public ContentResult Index()
+        public JsonResult Index()
         {
-            return Content("Welcome...");
+            Person person1 = new Person() { Name = "Moises", Age = 38 };
+            Person person2 = new Person() { Name = "Daniela", Age = 6 };
+
+            return Json(new List<Person>() {person1, person2 }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult About()
