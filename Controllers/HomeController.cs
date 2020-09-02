@@ -11,7 +11,7 @@ namespace demoMvc.Controllers
         public ActionResult Index()
         {
 
-            return RedirectToAction("Contact");
+            return RedirectToAction("Register","Account");
         }
 
         public ActionResult About()
