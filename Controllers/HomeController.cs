@@ -11,7 +11,7 @@ namespace demoMvc.Controllers
         public ActionResult Index()
         {
 
-            return Redirect("https://www.google.com.pe");
+            return RedirectToAction("Contact");
         }
 
         public ActionResult About()
