@@ -10,8 +10,8 @@ namespace demoMvc.Controllers
     {
         public ActionResult Index()
         {
-
-            return new HttpStatusCodeResult(404,"Page Not Found");
+            var route = Server.MapPath("texto.txt");
+            return File(route,"Text/Plain","text-custom.txt") ;
         }
 
         public ActionResult About()
