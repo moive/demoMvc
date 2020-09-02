@@ -11,7 +11,7 @@ namespace demoMvc.Controllers
         public ActionResult Index()
         {
 
-            return RedirectToRoute("RuteoEjemplo");
+            return new HttpStatusCodeResult(404,"Page Not Found");
         }
 
         public ActionResult About()
