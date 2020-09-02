@@ -9,9 +9,9 @@ namespace demoMvc.Controllers
 
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ContentResult Index()
         {
-            return View();
+            return Content("Welcome...");
         }
 
         public ActionResult About()
