@@ -6,21 +6,12 @@ using System.Web.Mvc;
 
 namespace demoMvc.Controllers
 {
-
-    public class Person
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-    }
-
     public class HomeController : Controller
     {
-        public JsonResult Index()
+        public ActionResult Index()
         {
-            Person person1 = new Person() { Name = "Moises", Age = 38 };
-            Person person2 = new Person() { Name = "Daniela", Age = 6 };
 
-            return Json(new List<Person>() {person1, person2 }, JsonRequestBehavior.AllowGet);
+            return Redirect("https://www.google.com.pe");
         }
 
         public ActionResult About()
