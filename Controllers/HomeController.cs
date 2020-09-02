@@ -11,7 +11,7 @@ namespace demoMvc.Controllers
         public ActionResult Index()
         {
 
-            return RedirectToAction("Register","Account");
+            return RedirectToRoute("RuteoEjemplo");
         }
 
         public ActionResult About()
