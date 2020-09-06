@@ -5,7 +5,7 @@
     int[] numbers = new int[] {11, 23, 53, 25, 36 };
 }
 
-<h2>List of movies in billboard</h2>
+<h2>@ViewBag.Message</h2>
 @*@foreach (var item in numbers)
 {
     <div>
@@ -28,7 +28,7 @@
             var rowClass = (!movie.IsOnTheBillboard) ? "danger" : string.Empty;
             <tr class="@rowClass">
                 @*Html.Raw not recommended*@
-                <td>@Html.Raw(movie.Title)</td>
+                <td>@(movie.Title)</td>
                 <td>@movie.Gender</td>
             </tr>
         }

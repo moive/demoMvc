@@ -40,9 +40,10 @@ namespace demoMvc.Controllers
             return View();
         }
 
-        public ActionResult MyAction()
+        public ActionResult MyAction(int Total=0)
         {
             var model = _movieRepositories.GetMovies();
+            ViewBag.Message = "List of movies in billboard, Id:" + Total;
             return View(model);
         }
     }
