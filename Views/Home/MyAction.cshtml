@@ -25,11 +25,7 @@
     <tbody>
         @foreach (var movie in Model)
         {
-            var rowClass = string.Empty;
-            if (!movie.IsOnTheBillboard)
-            {
-                rowClass = "danger";
-            }
+            var rowClass = (!movie.IsOnTheBillboard) ? "danger" : string.Empty;
             <tr class="@rowClass">
                 <td>@movie.Title</td>
                 <td>@movie.Gender</td>
