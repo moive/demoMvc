@@ -1,4 +1,5 @@
-﻿using System;
+﻿using demoMvc.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,13 @@ namespace demoMvc.Controllers
 {
     public class HomeController : Controller
     {
+        private MovieRepositories _movieRepositories;
+
+        public HomeController()
+        {
+            _movieRepositories = new MovieRepositories();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -34,7 +42,8 @@ namespace demoMvc.Controllers
 
         public ActionResult MyAction()
         {
-            return View();
+            var model = _movieRepositories.GetMovies();
+            return View(model);
         }
     }
 }

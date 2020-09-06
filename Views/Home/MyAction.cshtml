@@ -1,13 +1,39 @@
-﻿
+﻿@using demoMvc.Models;
+@model List<Movie> 
 @{
-    ViewBag.Title = "MyAction";
+    ViewBag.Title = "My Action";
     int[] numbers = new int[] {11, 23, 53, 25, 36 };
 }
 
-<h2>MyAction</h2>
-@foreach (var item in numbers)
+<h2>List of movies in billboard</h2>
+@*@foreach (var item in numbers)
 {
     <div>
         <strong>@item</strong>
     </div>
-}
+}*@
+
+<div>Showing @Model.Count movies</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            var rowClass = string.Empty;
+            if (!movie.IsOnTheBillboard)
+            {
+                rowClass = "danger";
+            }
+            <tr class="@rowClass">
+                <td>@movie.Title</td>
+                <td>@movie.Gender</td>
+            </tr>
+        }
+    </tbody>
+</table>
