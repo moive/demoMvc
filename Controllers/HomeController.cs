@@ -31,5 +31,10 @@ namespace demoMvc.Controllers
 
             return View();
         }
+
+        public ActionResult MyAction()
+        {
+            return View();
+        }
     }
 }

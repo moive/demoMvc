@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "MyAction";
+    int[] numbers = new int[] {11, 23, 53, 25, 36 };
+}
+
+<h2>MyAction</h2>
+@foreach (var item in numbers)
+{
+    <div>
+        <strong>@item</strong>
+    </div>
+}
