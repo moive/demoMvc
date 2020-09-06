@@ -10,8 +10,7 @@ namespace demoMvc.Controllers
     {
         public ActionResult Index()
         {
-            var route = Server.MapPath("texto.txt");
-            return File(route,"Text/Plain","text-custom.txt") ;
+            return View();
         }
 
         public ActionResult About()
@@ -21,9 +20,9 @@ namespace demoMvc.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact(string Name, int Age=0)
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your contact page." + Name + Age;
 
             return View();
         }
