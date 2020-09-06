@@ -20,18 +20,14 @@ namespace demoMvc.Controllers
             return View();
         }
 
-        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+            ViewBag.AInteger = 45;
+            ViewBag.ADate = new DateTime(2020,9,5);
 
-        [HttpPost]
-        public ActionResult Contact(string Name, int Age = 0)
-        {
-            ViewBag.Message = "Your contact page." + Name + Age;
+            ViewData["MyMessage"] = "This was with ViewData";
 
             return View();
         }
