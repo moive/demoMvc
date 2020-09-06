@@ -20,7 +20,7 @@ namespace demoMvc.DAL
                 },
                 new Movie()
                 {
-                    Title = "Mechanic: Resurrection",
+                    Title = "<b>Mechanic: Resurrection<b> <script>alert('hached!')</script>",
                     IsOnTheBillboard = true,
                     Gender = "Action"
                 },

@@ -27,7 +27,8 @@
         {
             var rowClass = (!movie.IsOnTheBillboard) ? "danger" : string.Empty;
             <tr class="@rowClass">
-                <td>@movie.Title</td>
+                @*Html.Raw not recommended*@
+                <td>@Html.Raw(movie.Title)</td>
                 <td>@movie.Gender</td>
             </tr>
         }
