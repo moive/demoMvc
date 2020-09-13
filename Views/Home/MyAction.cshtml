@@ -2,7 +2,7 @@
 @model List<Movie> 
 @{
     ViewBag.Title = "My Action";
-    int[] numbers = new int[] {11, 23, 53, 25, 36 };
+    int[] numbers = new int[] { 11, 23, 53, 25, 36 };
 }
 
 <h2>@ViewBag.Message</h2>
@@ -34,3 +34,7 @@
         }
     </tbody>
 </table>
+
+@{
+    Html.RenderAction("Contact");
+}
