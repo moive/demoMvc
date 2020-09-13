@@ -27,7 +27,7 @@ namespace demoMvc.Controllers
 
             return View();
         }
-        
+        [ChildActionOnly]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
