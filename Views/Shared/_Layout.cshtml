@@ -33,9 +33,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        @{
-            Html.RenderAction("Contact","Home");
-        }
+        @Html.Action("Contact");
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
